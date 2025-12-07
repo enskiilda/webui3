@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --app-text-scale: 1;
+}
+
+html {
+  word-break: break-word;
+  font-size: calc(1rem * var(--app-text-scale, 1));
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Inter', ui-sans-serif, system-ui,
+    'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans', sans-serif, 'Helvetica Neue', Arial,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: theme(--color-gray-400);
+  }
+}
+
+pre[class*='language-'] {
+  position: relative;
+  overflow: auto;
+  margin: 5px 0;
+  padding: 1.75rem 0 1.75rem 1rem;
+  border-radius: 10px;
+}
+
+code {
+  overflow-x: auto;
+  width: auto;
+}
+
+.hljs {
+  @apply rounded-lg;
+}

@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+        font-family: 'Inter';
+        src: url('/assets/fonts/Inter-Variable.ttf');
+        font-display: swap;
+}
+
+@font-face {
+        font-family: 'Archivo';
+        src: url('/assets/fonts/Archivo-Variable.ttf');
+        font-display: swap;
+}
+
+@font-face {
+        font-family: 'Mona Sans';
+        src: url('/assets/fonts/Mona-Sans.woff2');
+        font-display: swap;
+}
+
+:root {
+        --app-text-scale: 1;
+}
+
+html {
+        word-break: break-word;
+        font-size: calc(1rem * var(--app-text-scale, 1));
+}
+
+code {
+        overflow-x: auto;
+        width: auto;
+}
+
+.font-primary {
+        font-family: 'Archivo', sans-serif;
+}
+
+.hljs {
+        @apply rounded-lg;
+}
+
+::-webkit-scrollbar-thumb {
+        --tw-border-opacity: 1;
+        background-color: rgba(215, 215, 215, 0.6);
+        border-color: rgba(255, 255, 255, var(--tw-border-opacity));
+        border-radius: 9999px;
+        border-width: 1px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+        --tw-border-opacity: 1;
+        background-color: rgba(80, 80, 80, 0.6);
+        border-color: rgba(30, 30, 30, var(--tw-border-opacity));
+}
+
+::-webkit-scrollbar {
+        background-color: transparent;
+        height: 0.75rem;
+        width: 0.75rem;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+        display: none;
+}
+
+.scrollbar-hidden {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+}
